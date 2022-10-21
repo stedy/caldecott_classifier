@@ -2,3 +2,5 @@ bs4
 colorthief
 lxml
 pandas>=1.5
+numpy
+tensorflow
