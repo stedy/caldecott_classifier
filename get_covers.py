@@ -24,9 +24,12 @@ winners = df2[df2['award'] == "Winner"]
 winners['year'] = pd.to_numeric(winners['year'])
 recent_winners = winners[winners['year'] > 2000]
 
+headers = {'User-Agent': 'CoolBot/0.0 (https://example.org/coolbot/; coolbot@example.org)'}
+
 for x in recent_winners['book']:
     x_year = recent_winners[recent_winners['book'] == x]['year'].values[0]
-    r2 = requests.get("https://en.wikipedia.org/" + x)
+    r2 = requests.get("https://en.wikipedia.org/" + x, allow_redirects = True,
+            headers = headers)
     soup = BeautifulSoup(r2.text, 'html.parser')
     bookimages = soup.find('meta', {'property':"og:image"})
     FN = str(x_year) + "_" + str(x).strip("/wiki/") + ".jpg"
