@@ -3,4 +3,5 @@ colorgram.py
 lxml
 pandas>=1.5
 numpy
+seaborn
 tensorflow

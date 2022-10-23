@@ -39,6 +39,9 @@ model.compile(loss=loss_function,
 print(model.summary())
 
 history = model.fit(x=train_dataset, y=train_labels, validation_split = 0.2,
-        epochs = 3000, batch_size = 2048, shuffle=True)
+        epochs = 5000, batch_size = 2048, shuffle=True)
 
 model.save('color_model.h5')
+
+
+print(model.summary())
