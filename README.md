@@ -1,7 +1,7 @@
 # Caldecott Classifier
 
 This is a repo to demonstrate classifying book covers (specifically the
-[Caldecott Medal](https://en.wikipedia.org/wiki/Caldecott_Medal) by the
+[Caldecott Medal](https://en.wikipedia.org/wiki/Caldecott_Medal)) by the
 colors of their covers based on some pre-trained data.
 
 To replicate this analysis run the scripts in this order:
@@ -11,7 +11,7 @@ To replicate this analysis run the scripts in this order:
 2 - `build_model.py` - Uses [Tensorflow](https://www.tensorflow.org/) to
 build a matrix of likely colors based on pre-trained color data
 
-3 - `classify_covers.py` - Classify the Caldecott Medal winners book
+3 - `classify_covers.py` - Uses the [colorgram](https://github.com/obskyr/colorgram.py) python module to extract color profiles from each cover image and classify each book
 covers based on the model built in the prior step.
 
 4 - `make_figure.py` - Uses [Seaborn](https://seaborn.pydata.org/) to
