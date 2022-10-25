@@ -17,4 +17,4 @@ cover using the model built in the prior step.
 4 - `make_figure.py` - Uses [Seaborn](https://seaborn.pydata.org/) to
 create the following figure of book color distributions by year:
 
-![image](https://user-images.githubusercontent.com/345365/197376047-2d997cc7-32a7-4a34-b561-4ee878ba1aae.png)
+![caldecott_colors](https://user-images.githubusercontent.com/345365/197893220-15c38d3f-197c-417e-9cfe-725834687aee.png)
