@@ -11,9 +11,11 @@ colors[['year', 'title']] = colors['book'].str.split("_",1,expand=True)
 
 colors = pd.DataFrame(colors.groupby(["year", "color"])["proportion"].sum())
 
-colors_1 = colors.reset_index()
+colors['pct'] = colors.groupby(['year'])["proportion"].transform('sum')
+colors['total_pct'] = colors['proportion']/colors['pct']
 
-colors_wide = pd.pivot(colors_1, index="year", columns = "color", values ="proportion")
+colors_1 = colors.reset_index()
+colors_wide = pd.pivot(colors_1, index="year", columns = "color", values="total_pct")
 
 colors_wide1 = colors_wide.reset_index()
 
