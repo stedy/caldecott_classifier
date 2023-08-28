@@ -1,8 +1,8 @@
+import os
 import pandas as pd
 import colorgram
 import numpy as np
 import tensorflow as tf
-import os
 
 def rgb_to_hex(r, g, b):
     '''Function to convert RGB to hexcode'''
